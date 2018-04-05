@@ -1,0 +1,45 @@
+{
+  "name": "convert-array-to-csv",
+  "version": "0.0.0",
+  "description": "Convert an array to a csv formatted string",
+  "main": "./lib/index.js",
+  "repository": "https://www.github.com/aichbauer/node-convert-array-to-csv",
+  "author": "Aichbauer Lukas <l.aichbauer@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "pretest": "npm run build && npm run lint",
+    "lint": "eslint src",
+    "test": "jest --coverage",
+    "build": "babel src --out-dir lib",
+    "prepublish": "npm run build"
+  },
+  "keywords": [
+    "array",
+    "csv",
+    "list",
+    "convert",
+    "comma-separated",
+    "values",
+    "convert-array-to-csv"
+  ],
+  "jest": {
+    "globals": {
+      "__DEV__": true
+    },
+    "testEnvironment": "node",
+    "testPathIgnorePatterns": [
+      "/node_modules/"
+    ]
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2017": "^6.24.1",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.9.0",
+    "jest": "^22.4.3"
+  }
+}
