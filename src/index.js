@@ -2,11 +2,11 @@ import { checkIfValid } from './helpers/check-if-valid';
 import { convertArrayOfArraysToCSV } from './modules/convert-array-of-arrays-to-csv';
 import { convertArrayOfObjectsToCSV } from './modules/convert-array-of-objects-to-csv';
 
-export const convertArrayToCSV = (data, { header, separator }) => {
+export const convertArrayToCSV = (data, { header, separator } = {}) => {
   checkIfValid(data);
 
   const thisOptions = {
-    header: header || undefined,
+    header,
     separator: separator || ',',
   };
 

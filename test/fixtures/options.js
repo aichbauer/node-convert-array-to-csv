@@ -1,5 +1,6 @@
-export const optionsOnlyHeader = {
+export const optionsHeaderSeparatorDefault = {
   header: ['Number', 'First', 'Last', 'Handle'],
+  separator: ',',
 };
 
 export const optionsHeaderSeperatorSemicolon = {
@@ -7,6 +8,12 @@ export const optionsHeaderSeperatorSemicolon = {
   separator: ';',
 };
 
-export const optionsOnlySeperatorTab = {
+export const optionsHeaderDefaultSeperatorTab = {
+  header: undefined,
   separator: '\t',
+};
+
+export const optionsDefault = {
+  header: undefined,
+  separator: ',',
 };

@@ -3,8 +3,9 @@ import { convertArrayOfObjectsToCSV } from '../../lib/modules/convert-array-of-o
 import { dataObject } from '../fixtures/data';
 import {
   optionsHeaderSeperatorSemicolon,
-  optionsOnlyHeader,
-  optionsOnlySeperatorTab,
+  optionsHeaderSeparatorDefault,
+  optionsHeaderDefaultSeperatorTab,
+  optionsDefault,
 } from '../fixtures/options';
 
 import {
@@ -14,26 +15,26 @@ import {
   expectedResultObjecOnlySeparatorTab,
 } from '../fixtures/expected-results';
 
-test('convertArrayOfObjectsToCSV | array of objects | with no options', () => {
-  const result = convertArrayOfObjectsToCSV(dataObject);
+test('convertArrayOfObjectsToCSV | array of objects | with default options', () => {
+  const result = convertArrayOfObjectsToCSV(dataObject, optionsDefault);
 
   expect(result).toBe(expectedResultObjectNoOptions);
 });
 
-test('convertArrayOfObjectsToCSV | array of objects | options: header + seperator semicolon', () => {
+test('convertArrayOfObjectsToCSV | array of objects | options: header + separator semicolon', () => {
   const result = convertArrayOfObjectsToCSV(dataObject, optionsHeaderSeperatorSemicolon);
 
   expect(result).toBe(expectedResultObjectHeaderSeparatorSemicolon);
 });
 
-test('convertArrayOfObjectsToCSV | array of objects | options: header', () => {
-  const result = convertArrayOfObjectsToCSV(dataObject, optionsOnlyHeader);
+test('convertArrayOfObjectsToCSV | array of objects | options: header + default separator', () => {
+  const result = convertArrayOfObjectsToCSV(dataObject, optionsHeaderSeparatorDefault);
 
   expect(result).toBe(expectedResultObjectOnlyHeader);
 });
 
-test('convertArrayOfObjectsToCSV | array of objects | options: separator tab', () => {
-  const result = convertArrayOfObjectsToCSV(dataObject, optionsOnlySeperatorTab);
+test('convertArrayOfObjectsToCSV | array of objects | options: default header + separator tab', () => {
+  const result = convertArrayOfObjectsToCSV(dataObject, optionsHeaderDefaultSeperatorTab);
 
   expect(result).toBe(expectedResultObjecOnlySeparatorTab);
 });
