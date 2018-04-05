@@ -1,6 +1,6 @@
 import { checkSpecialCharsAndEmpty } from '../helpers/check-special-chars-and-empty';
 
-export const convertArrayOfArraysToCSV = (data, { header, separator } = {}) => {
+export const convertArrayOfArraysToCSV = (data, { header, separator }) => {
   const array = [...data];
   let csv = '';
 
