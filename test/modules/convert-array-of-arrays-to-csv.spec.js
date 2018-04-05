@@ -6,8 +6,9 @@ import {
 } from '../fixtures/data';
 import {
   optionsHeaderSeperatorSemicolon,
-  optionsOnlyHeader,
-  optionsOnlySeperatorTab,
+  optionsHeaderSeparatorDefault,
+  optionsHeaderDefaultSeperatorTab,
+  optionsDefault,
 } from '../fixtures/options';
 
 import {
@@ -18,38 +19,38 @@ import {
   expectedResultArrayOnlySeparatorTab,
 } from '../fixtures/expected-results';
 
-test('convertArrayOfArraysToCSV | array of arrays | with no options', () => {
-  const result = convertArrayOfArraysToCSV(dataArrayWithHeader);
+test('convertArrayOfArraysToCSV | array of arrays | with default options', () => {
+  const result = convertArrayOfArraysToCSV(dataArrayWithHeader, optionsDefault);
 
   expect(result).toBe(expectedResultArrayWithHeaderNoOptions);
 });
 
-test('convertArrayOfArraysToCSV | array of arrays | with no options and no header', () => {
-  const result = convertArrayOfArraysToCSV(dataArrayWithoutHeader);
+test('convertArrayOfArraysToCSV | array of arrays | with default options and no header', () => {
+  const result = convertArrayOfArraysToCSV(dataArrayWithoutHeader, optionsDefault);
 
   expect(result).toBe(expectedResultArrayNoHeaderNoOptions);
 });
 
-test('convertArrayOfArraysToCSV | array of arrays | with no options and no header', () => {
-  const result = convertArrayOfArraysToCSV(dataArrayWithoutHeader);
+test('convertArrayOfArraysToCSV | array of arrays | with default options and no header', () => {
+  const result = convertArrayOfArraysToCSV(dataArrayWithoutHeader, optionsDefault);
 
   expect(result).toBe(expectedResultArrayNoHeaderNoOptions);
 });
 
-test('convertArrayOfArraysToCSV | array of arrays | options: header + seperator semicolon', () => {
+test('convertArrayOfArraysToCSV | array of arrays | options: header + separator semicolon', () => {
   const result = convertArrayOfArraysToCSV(dataArrayWithoutHeader, optionsHeaderSeperatorSemicolon);
 
   expect(result).toBe(expectedResultArrayHeaderSeparatorSemicolon);
 });
 
-test('convertArrayOfArraysToCSV | array of arrays | options: header ', () => {
-  const result = convertArrayOfArraysToCSV(dataArrayWithoutHeader, optionsOnlyHeader);
+test('convertArrayOfArraysToCSV | array of arrays | options: header + default separator', () => {
+  const result = convertArrayOfArraysToCSV(dataArrayWithoutHeader, optionsHeaderSeparatorDefault);
 
   expect(result).toBe(expectedResultArrayOnlyHeader);
 });
 
-test('convertArrayOfArraysToCSV | array of arrays | options: separator tab ', () => {
-  const result = convertArrayOfArraysToCSV(dataArrayWithHeader, optionsOnlySeperatorTab);
+test('convertArrayOfArraysToCSV | array of arrays | options: default header + separator tab', () => {
+  const result = convertArrayOfArraysToCSV(dataArrayWithHeader, optionsHeaderDefaultSeperatorTab);
 
   expect(result).toBe(expectedResultArrayOnlySeparatorTab);
 });
