@@ -3,6 +3,7 @@ import { convertArrayOfArraysToCSV } from '../../lib/modules/convert-array-of-ar
 import {
   dataArrayWithHeader,
   dataArrayWithoutHeader,
+  dataArrayWithHeaderAndNullAndUndefined,
 } from '../fixtures/data';
 import {
   optionsHeaderSeperatorSemicolon,
@@ -17,6 +18,7 @@ import {
   expectedResultArrayOnlyHeader,
   expectedResultArrayHeaderSeparatorSemicolon,
   expectedResultArrayOnlySeparatorTab,
+  expectedResultArrayNullAndUndefined,
 } from '../fixtures/expected-results';
 
 test('convertArrayOfArraysToCSV | array of arrays | with default options', () => {
@@ -53,4 +55,10 @@ test('convertArrayOfArraysToCSV | array of arrays | options: default header + se
   const result = convertArrayOfArraysToCSV(dataArrayWithHeader, optionsHeaderDefaultSeperatorTab);
 
   expect(result).toBe(expectedResultArrayOnlySeparatorTab);
+});
+
+test('convertArrayOfArraysToCSV | array of arrays with values of null and undefined | options: header + default separator', () => {
+  const result = convertArrayOfArraysToCSV(dataArrayWithHeaderAndNullAndUndefined, optionsDefault);
+
+  expect(result).toBe(expectedResultArrayNullAndUndefined);
 });
