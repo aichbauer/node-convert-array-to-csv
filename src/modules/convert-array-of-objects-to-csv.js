@@ -17,7 +17,7 @@ export const convertArrayOfObjectsToCSV = (data, { header, separator }) => {
   array.forEach((row, idx) => {
     if (!header && idx === 0) {
       Object.entries(row).forEach((entry, i) => {
-        const key = entry[0];
+        const key = entry[0] ? entry[0] : '';
         const includesSpecials = checkSpecialCharsAndEmpty(key);
 
         csv +=
@@ -27,7 +27,7 @@ export const convertArrayOfObjectsToCSV = (data, { header, separator }) => {
       });
     }
     Object.entries(row).forEach((entry, i) => {
-      const value = entry[1];
+      const value = entry[1] ? entry[1] : '';
       const includesSpecials = checkSpecialCharsAndEmpty(value);
 
       csv +=

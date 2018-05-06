@@ -6,9 +6,10 @@ export const convertArrayOfArraysToCSV = (data, { header, separator }) => {
 
   if (header) {
     header.forEach((headerEl, i) => {
-      const includesSpecials = checkSpecialCharsAndEmpty(headerEl);
+      const thisHeaderEl = headerEl || '';
+      const includesSpecials = checkSpecialCharsAndEmpty(thisHeaderEl);
       csv +=
-        (includesSpecials ? `"${headerEl}"` : headerEl) +
+        (includesSpecials ? `"${thisHeaderEl}"` : thisHeaderEl) +
         (Object.entries(header).length - 1 === i ? '' : separator) +
         (Object.entries(header).length - 1 === i ? '\n' : '');
     });
@@ -16,9 +17,10 @@ export const convertArrayOfArraysToCSV = (data, { header, separator }) => {
 
   array.forEach((row) => {
     row.forEach((value, i) => {
-      const includesSpecials = checkSpecialCharsAndEmpty(value);
+      const thisValue = value || '';
+      const includesSpecials = checkSpecialCharsAndEmpty(thisValue);
       csv +=
-        (includesSpecials ? `"${value}"` : value) +
+        (includesSpecials ? `"${thisValue}"` : thisValue) +
         (row.length - 1 === i ? '' : separator) +
         (row.length - 1 === i ? '\n' : '');
     });

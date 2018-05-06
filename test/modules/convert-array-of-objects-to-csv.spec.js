@@ -1,6 +1,9 @@
 import { convertArrayOfObjectsToCSV } from '../../lib/modules/convert-array-of-objects-to-csv';
 
-import { dataObject } from '../fixtures/data';
+import {
+  dataObject,
+  dataObjectWithNullAndUndefined,
+} from '../fixtures/data';
 import {
   optionsHeaderSeperatorSemicolon,
   optionsHeaderSeparatorDefault,
@@ -13,6 +16,7 @@ import {
   expectedResultObjectHeaderSeparatorSemicolon,
   expectedResultObjectOnlyHeader,
   expectedResultObjecOnlySeparatorTab,
+  expectedResultObjectNullAndUndefined,
 } from '../fixtures/expected-results';
 
 test('convertArrayOfObjectsToCSV | array of objects | with default options', () => {
@@ -37,4 +41,13 @@ test('convertArrayOfObjectsToCSV | array of objects | options: default header + 
   const result = convertArrayOfObjectsToCSV(dataObject, optionsHeaderDefaultSeperatorTab);
 
   expect(result).toBe(expectedResultObjecOnlySeparatorTab);
+});
+
+test('convertArrayOfObjectsToCSV | array of objects with values of null and undefined | options: header + default separator', () => {
+  const result = convertArrayOfObjectsToCSV(
+    dataObjectWithNullAndUndefined,
+    optionsHeaderSeparatorDefault,
+  );
+
+  expect(result).toBe(expectedResultObjectNullAndUndefined);
 });
