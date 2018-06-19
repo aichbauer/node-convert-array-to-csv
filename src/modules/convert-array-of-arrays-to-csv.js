@@ -17,7 +17,7 @@ export const convertArrayOfArraysToCSV = (data, { header, separator }) => {
 
   array.forEach((row) => {
     row.forEach((value, i) => {
-      const thisValue = value || '';
+      const thisValue = value || ((value === 0)?0:'');
       const includesSpecials = checkSpecialCharsAndEmpty(thisValue);
       csv +=
         (includesSpecials ? `"${thisValue}"` : thisValue) +
