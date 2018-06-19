@@ -14,6 +14,12 @@ const dataArrayWithNullAndUndefined = [
   [3, 'Larry', 'the Bird', '@twitter'],
 ];
 
+const dataArrayWithZero = [
+	[0, 'Mark', 'Otto', '@mdo'],
+	[1, 'Jacob', 'Thornton', '@fat'],
+	[2, 'Larry', 'the Bird', '@twitter'],
+]
+
 const data = [
   {
     number: 1,
@@ -76,4 +82,9 @@ export const dataObjectWithNullAndUndefined = [
 export const dataArrayWithHeaderAndNullAndUndefined = [
   ...headerArray,
   ...dataArrayWithNullAndUndefined,
+];
+
+export const dataArrayWithHeaderAndZero = [
+  ...headerArray,
+  ...dataArrayWithZero,
 ];
