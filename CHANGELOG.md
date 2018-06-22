@@ -1,3 +1,7 @@
+1.0.2 - June, 22 2018
+
+* 4e024bd Fix : handle zero values correctly (array of arrays) (#4) (Kiwy404)
+
 1.0.1 - May, 07 2018
 
 * 6e91d6d Fix: handle null and undefined values (#2) (Lukas Aichbauer)
