@@ -65,7 +65,7 @@ test('convertArrayOfArraysToCSV | array of arrays with values of null and undefi
   expect(result).toBe(expectedResultArrayNullAndUndefined);
 });
 
-test('convertArrayOfArraysToCSV | array of arrays with value of zero | with default options and no header', () => {
+test('convertArrayOfArraysToCSV | array of arrays with value of zero | with default options and header', () => {
   const result = convertArrayOfArraysToCSV(dataArrayWithHeaderAndZero, optionsDefault);
 
   expect(result).toBe(expectedResultArrayZero);
