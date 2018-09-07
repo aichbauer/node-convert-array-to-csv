@@ -1,3 +1,7 @@
+1.0.4 - September, 07 2018
+
+* 2b92efa Chore: add prepush hook and changed prepublish to prepare (#6) (Lukas Aichbauer)
+
 1.0.3 - September, 07 2018
 
 * 51a76a7 Fix: babel runtime (#5) (fixes #3) (Lukas Aichbauer)
