@@ -10,8 +10,8 @@ export const convertArrayOfArraysToCSV = (data, { header, separator }) => {
       const includesSpecials = checkSpecialCharsAndEmpty(thisHeaderEl);
       csv
         += (includesSpecials ? `"${thisHeaderEl}"` : thisHeaderEl)
-        + (Object.entries(header).length - 1 === i ? '' : separator)
-        + (Object.entries(header).length - 1 === i ? '\n' : '');
+        + (Object.keys(header).length - 1 === i ? '' : separator)
+        + (Object.keys(header).length - 1 === i ? '\n' : '');
     });
   }
 
