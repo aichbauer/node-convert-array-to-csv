@@ -1,4 +1,4 @@
-import { checkSpecialCharsAndEmpty } from '../../lib/helpers/check-special-chars-and-empty';
+import { checkSpecialCharsAndEmpty } from '../../src/helpers/check-special-chars-and-empty';
 
 test('checkIfValid | newline', () => {
   const result = checkSpecialCharsAndEmpty('\n');

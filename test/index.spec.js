@@ -1,4 +1,4 @@
-import converter, { convertArrayToCSV } from '../lib';
+import converter, { convertArrayToCSV } from '../src';
 
 import {
   dataArrayWithoutHeader,

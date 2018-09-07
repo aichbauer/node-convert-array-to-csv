@@ -1,4 +1,4 @@
-import { convertArrayOfObjectsToCSV } from '../../lib/modules/convert-array-of-objects-to-csv';
+import { convertArrayOfObjectsToCSV } from '../../src/modules/convert-array-of-objects-to-csv';
 
 import {
   dataObject,

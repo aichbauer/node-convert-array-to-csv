@@ -1,4 +1,4 @@
-import { convertArrayOfArraysToCSV } from '../../lib/modules/convert-array-of-arrays-to-csv';
+import { convertArrayOfArraysToCSV } from '../../src/modules/convert-array-of-arrays-to-csv';
 
 import {
   dataArrayWithHeader,
