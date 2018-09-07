@@ -8,10 +8,10 @@ export const convertArrayOfArraysToCSV = (data, { header, separator }) => {
     header.forEach((headerEl, i) => {
       const thisHeaderEl = headerEl || '';
       const includesSpecials = checkSpecialCharsAndEmpty(thisHeaderEl);
-      csv +=
-        (includesSpecials ? `"${thisHeaderEl}"` : thisHeaderEl) +
-        (Object.entries(header).length - 1 === i ? '' : separator) +
-        (Object.entries(header).length - 1 === i ? '\n' : '');
+      csv
+        += (includesSpecials ? `"${thisHeaderEl}"` : thisHeaderEl)
+        + (Object.keys(header).length - 1 === i ? '' : separator)
+        + (Object.keys(header).length - 1 === i ? '\n' : '');
     });
   }
 
@@ -19,10 +19,10 @@ export const convertArrayOfArraysToCSV = (data, { header, separator }) => {
     row.forEach((value, i) => {
       const thisValue = value || (value === 0 ? 0 : '');
       const includesSpecials = checkSpecialCharsAndEmpty(thisValue);
-      csv +=
-        (includesSpecials ? `"${thisValue}"` : thisValue) +
-        (row.length - 1 === i ? '' : separator) +
-        (row.length - 1 === i ? '\n' : '');
+      csv
+        += (includesSpecials ? `"${thisValue}"` : thisValue)
+        + (row.length - 1 === i ? '' : separator)
+        + (row.length - 1 === i ? '\n' : '');
     });
   });
 

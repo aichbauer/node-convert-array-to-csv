@@ -1,4 +1,4 @@
-import { checkIfValid } from '../../lib/helpers/check-if-valid';
+import { checkIfValid } from '../../src/helpers/check-if-valid';
 
 test('checkIfValid | wrong data', () => {
   const result = () => checkIfValid({});
