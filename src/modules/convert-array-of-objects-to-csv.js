@@ -7,10 +7,10 @@ export const convertArrayOfObjectsToCSV = (data, { header, separator }) => {
   if (header) {
     header.forEach((headerEl, i) => {
       const includesSpecials = checkSpecialCharsAndEmpty(headerEl);
-      csv +=
-        (includesSpecials ? `"${headerEl}"` : headerEl) +
-        (Object.entries(header).length - 1 === i ? '' : separator) +
-        (Object.entries(header).length - 1 === i ? '\n' : '');
+      csv
+        += (includesSpecials ? `"${headerEl}"` : headerEl)
+        + (Object.entries(header).length - 1 === i ? '' : separator)
+        + (Object.entries(header).length - 1 === i ? '\n' : '');
     });
   }
 
@@ -20,20 +20,20 @@ export const convertArrayOfObjectsToCSV = (data, { header, separator }) => {
         const key = entry[0] ? entry[0] : '';
         const includesSpecials = checkSpecialCharsAndEmpty(key);
 
-        csv +=
-          (includesSpecials ? `"${key}"` : key) +
-          (Object.entries(row).length - 1 === i ? '' : separator) +
-          (Object.entries(row).length - 1 === i ? '\n' : '');
+        csv
+          += (includesSpecials ? `"${key}"` : key)
+          + (Object.entries(row).length - 1 === i ? '' : separator)
+          + (Object.entries(row).length - 1 === i ? '\n' : '');
       });
     }
     Object.entries(row).forEach((entry, i) => {
       const value = entry[1] ? entry[1] : '';
       const includesSpecials = checkSpecialCharsAndEmpty(value);
 
-      csv +=
-        (includesSpecials ? `"${value}"` : value) +
-        (Object.entries(row).length - 1 === i ? '' : separator) +
-        (Object.entries(row).length - 1 === i ? '\n' : '');
+      csv
+        += (includesSpecials ? `"${value}"` : value)
+        + (Object.entries(row).length - 1 === i ? '' : separator)
+        + (Object.entries(row).length - 1 === i ? '\n' : '');
     });
   });
 
