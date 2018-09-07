@@ -8,11 +8,12 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "pretest": "npm run build && npm run lint",
+    "pretest": "yarn run build && yarn run lint",
     "lint": "eslint src",
     "test": "jest --coverage",
     "build": "babel src --out-dir lib",
-    "prepublish": "npm run build"
+    "prepush": "yarn run test",
+    "prepare": "yarn run build"
   },
   "keywords": [
     "array",
