@@ -1,3 +1,7 @@
+1.0.3 - September, 07 2018
+
+* 51a76a7 Fix: babel runtime (#5) (fixes #3) (Lukas Aichbauer)
+
 1.0.2 - June, 22 2018
 
 * 4e024bd Fix : handle zero values correctly (array of arrays) (#4) (Kiwy404)
