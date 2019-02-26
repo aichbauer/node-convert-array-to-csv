@@ -10,6 +10,7 @@ export const checkSpecialCharsAndEmpty = (value) => {
     || thisValue.includes('\'')
     || thisValue.includes('`')
     || thisValue.includes('´')
+    || thisValue.includes(' ')
     || thisValue.length === 0;
 
   return hasSpecialChars;
