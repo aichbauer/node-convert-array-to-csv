@@ -16,6 +16,8 @@ export const expectedResultObjecOnlySeparatorTab = 'number\tfirst\tlast\thandle\
 
 export const expectedResultArrayHeaderWithSpaces = '"number number",first,last,handle\n1,Mark,Otto,@mdo\n2,Jacob,Thornton,@fat\n3,Larry,"the Bird",@twitter\n';
 
+export const expectedResultArrayWithDoubleQoutesInsideElement = '1,Mark,"Ot""to",@mdo\n2,Jacob,Thornton,@fat\n3,Larry,"the Bird",@twitter\n';
+
 export const expectedResultArrayWithHeaderNoOptions = expectedResultObjectNoOptions;
 
 export const expectedResultArrayOnlyHeader = expectedResultObjectOnlyHeader;
@@ -23,3 +25,5 @@ export const expectedResultArrayOnlyHeader = expectedResultObjectOnlyHeader;
 export const expectedResultArrayHeaderSeparatorSemicolon = expectedResultObjectHeaderSeparatorSemicolon; // eslint-disable-line
 
 export const expectedResultArrayOnlySeparatorTab = expectedResultObjecOnlySeparatorTab;
+
+export const expectedResultObjectWithDoubleQoutesInsideElement = `number,first,last,handle\n${expectedResultArrayWithDoubleQoutesInsideElement}`; // eslint-disable-line

@@ -3,6 +3,7 @@ import { convertArrayOfObjectsToCSV } from '../../src/modules/convert-array-of-o
 import {
   dataObject,
   dataObjectWithNullAndUndefined,
+  dataObjectWithDoubleQuotesInsideElement,
 } from '../fixtures/data';
 import {
   optionsHeaderSeperatorSemicolon,
@@ -17,9 +18,16 @@ import {
   expectedResultObjectOnlyHeader,
   expectedResultObjecOnlySeparatorTab,
   expectedResultObjectNullAndUndefined,
+  expectedResultObjectWithDoubleQoutesInsideElement,
 } from '../fixtures/expected-results';
 
 test('convertArrayOfObjectsToCSV | array of objects | with default options', () => {
+  const result = convertArrayOfObjectsToCSV(dataObjectWithDoubleQuotesInsideElement, optionsDefault); // eslint-disable-line
+
+  expect(result).toBe(expectedResultObjectWithDoubleQoutesInsideElement);
+});
+
+test('convertArrayOfObjectsToCSV | array of objects | with default options and double quotes in element', () => {
   const result = convertArrayOfObjectsToCSV(dataObject, optionsDefault);
 
   expect(result).toBe(expectedResultObjectNoOptions);

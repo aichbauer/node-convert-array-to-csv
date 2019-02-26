@@ -8,6 +8,12 @@ const dataArray = [
   [3, 'Larry', 'the Bird', '@twitter'],
 ];
 
+const dataArrayWithDoubleQuotes = [
+  [1, 'Mark', 'Ot"to', '@mdo'],
+  [2, 'Jacob', 'Thornton', '@fat'],
+  [3, 'Larry', 'the Bird', '@twitter'],
+];
+
 const dataArrayWithNullAndUndefined = [
   [1, 'Mark', null, '@mdo'],
   [2, 'Jacob', 'Thornton', undefined],
@@ -25,6 +31,27 @@ const data = [
     number: 1,
     first: 'Mark',
     last: 'Otto',
+    handle: '@mdo',
+  },
+  {
+    number: 2,
+    first: 'Jacob',
+    last: 'Thornton',
+    handle: '@fat',
+  },
+  {
+    number: 3,
+    first: 'Larry',
+    last: 'the Bird',
+    handle: '@twitter',
+  },
+];
+
+const dataObjectWithDoubleQuotes = [
+  {
+    number: 1,
+    first: 'Mark',
+    last: 'Ot"to',
     handle: '@mdo',
   },
   {
@@ -67,12 +94,20 @@ export const dataArrayWithHeader = [
   ...dataArray,
 ];
 
+export const dataArrayWithDoubleQuotesInsideElement = [
+  ...dataArrayWithDoubleQuotes,
+];
+
 export const dataArrayWithoutHeader = [
   ...dataArray,
 ];
 
 export const dataObject = [
   ...data,
+];
+
+export const dataObjectWithDoubleQuotesInsideElement = [
+  ...dataObjectWithDoubleQuotes,
 ];
 
 export const dataObjectWithNullAndUndefined = [
