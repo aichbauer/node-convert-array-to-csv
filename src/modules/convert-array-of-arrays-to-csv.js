@@ -1,4 +1,6 @@
-import { checkSpecialCharsAndEmpty } from '../helpers/check-special-chars-and-empty';
+// import { checkSpecialCharsAndEmpty } from '../helpers/check-special-chars-and-empty';
+
+import { appendElement } from '../helpers/append-element';
 
 export const convertArrayOfArraysToCSV = (data, { header, separator }) => {
   const array = [...data];
@@ -7,22 +9,16 @@ export const convertArrayOfArraysToCSV = (data, { header, separator }) => {
   if (header) {
     header.forEach((headerEl, i) => {
       const thisHeaderEl = headerEl || '';
-      const includesSpecials = checkSpecialCharsAndEmpty(thisHeaderEl);
-      csv
-        += (includesSpecials ? `"${thisHeaderEl}"` : thisHeaderEl)
-        + (Object.keys(header).length - 1 === i ? '' : separator)
-        + (Object.keys(header).length - 1 === i ? '\n' : '');
+
+      csv += appendElement(thisHeaderEl, header.length, i, separator);
     });
   }
 
   array.forEach((row) => {
     row.forEach((value, i) => {
       const thisValue = value || (value === 0 ? 0 : '');
-      const includesSpecials = checkSpecialCharsAndEmpty(thisValue);
-      csv
-        += (includesSpecials ? `"${thisValue}"` : thisValue)
-        + (row.length - 1 === i ? '' : separator)
-        + (row.length - 1 === i ? '\n' : '');
+
+      csv += appendElement(thisValue, row.length, i, separator);
     });
   });
 
