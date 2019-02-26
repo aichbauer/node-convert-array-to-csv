@@ -5,13 +5,25 @@ const separatorOrLineBreak = (length, elementIdx, separator) => (
   length - 1 === elementIdx ? '\n' : separator
 );
 
+const escapeDoubleQuotesInsideElement = (element) => {
+  const thisElement = element.replace('"', '""');
+
+  return thisElement;
+};
+
 const appendElement = (element, lineLength, elementIdx, separator) => {
   const includesSpecials = checkSpecialCharsAndEmpty(element);
 
+  let thisElement = element;
+
+  if (includesSpecials) {
+    thisElement = escapeDoubleQuotesInsideElement(thisElement);
+  }
+
   return (
     includesSpecials
-      ? `"${element}"${separatorOrLineBreak(lineLength, elementIdx, separator)}`
-      : `${element}${separatorOrLineBreak(lineLength, elementIdx, separator)}`
+      ? `"${thisElement}"${separatorOrLineBreak(lineLength, elementIdx, separator)}`
+      : `${thisElement}${separatorOrLineBreak(lineLength, elementIdx, separator)}`
   );
 };
 
