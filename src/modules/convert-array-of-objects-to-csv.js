@@ -1,4 +1,4 @@
-import { checkSpecialCharsAndEmpty } from '../helpers/check-special-chars-and-empty';
+import { appendElement } from '../helpers/append-element';
 
 export const convertArrayOfObjectsToCSV = (data, { header, separator }) => {
   const array = [...data];
@@ -6,34 +6,26 @@ export const convertArrayOfObjectsToCSV = (data, { header, separator }) => {
 
   if (header) {
     header.forEach((headerEl, i) => {
-      const includesSpecials = checkSpecialCharsAndEmpty(headerEl);
-      csv
-        += (includesSpecials ? `"${headerEl}"` : headerEl)
-        + (Object.keys(header).length - 1 === i ? '' : separator)
-        + (Object.keys(header).length - 1 === i ? '\n' : '');
+      const thisHeaderEl = headerEl || '';
+
+      csv += appendElement(thisHeaderEl, header.length, i, separator);
     });
   }
 
   array.forEach((row, idx) => {
+    const thisRow = Object.keys(row);
     if (!header && idx === 0) {
-      Object.keys(row).forEach((key, i) => {
+      thisRow.forEach((key, i) => {
         const value = key || '';
-        const includesSpecials = checkSpecialCharsAndEmpty(value);
 
-        csv
-          += (includesSpecials ? `"${value}"` : value)
-          + (Object.keys(row).length - 1 === i ? '' : separator)
-          + (Object.keys(row).length - 1 === i ? '\n' : '');
+        csv += appendElement(value, thisRow.length, i, separator);
       });
     }
-    Object.keys(row).forEach((key, i) => {
-      const value = row[key] || '';
-      const includesSpecials = checkSpecialCharsAndEmpty(value);
 
-      csv
-        += (includesSpecials ? `"${value}"` : value)
-        + (Object.keys(row).length - 1 === i ? '' : separator)
-        + (Object.keys(row).length - 1 === i ? '\n' : '');
+    thisRow.forEach((key, i) => {
+      const value = row[key] || '';
+
+      csv += appendElement(value, thisRow.length, i, separator);
     });
   });
 
