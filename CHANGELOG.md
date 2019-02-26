@@ -1,3 +1,9 @@
+1.0.5 - February, 26 2019
+
+* 58ec063 Fix: double quotes inside elements (closes #9) (#12) (Lukas Aichbauer)
+* 2ea0633 Refactor: add append element and separator or line break functions (closes #8) (#11) (Lukas Aichbauer)
+* c237523 Fix: space as special char (closes #7) (#10) (Lukas Aichbauer)
+
 1.0.4 - September, 07 2018
 
 * 2b92efa Chore: add prepush hook and changed prepublish to prepare (#6) (Lukas Aichbauer)
