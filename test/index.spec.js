@@ -8,12 +8,20 @@ import {
 import {
   expectedResultArrayNoHeaderNoOptions,
   expectedResultObjectNoOptions,
+  expectedResultArrayHeaderWithSpaces,gco 
 } from './fixtures/expected-results';
+import { optionsHeaderWithSpacesSeparatorDefault } from './fixtures/options';
 
 test('convertArrayToCsv | array of arrays | with no header and no options', () => {
   const result = convertArrayToCSV(dataArrayWithoutHeader);
 
   expect(result).toBe(expectedResultArrayNoHeaderNoOptions);
+});
+
+test('convertArrayToCsv | array of arrays | with header with spaces and no options', () => {
+  const result = convertArrayToCSV(dataArrayWithoutHeader, optionsHeaderWithSpacesSeparatorDefault);
+
+  expect(result).toBe(expectedResultArrayHeaderWithSpaces);
 });
 
 test('convertArrayToCsv | array of objects | with no options', () => {
