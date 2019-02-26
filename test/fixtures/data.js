@@ -15,10 +15,10 @@ const dataArrayWithNullAndUndefined = [
 ];
 
 const dataArrayWithZero = [
-	[0, 'Mark', 'Otto', '@mdo'],
-	[1, 'Jacob', 'Thornton', '@fat'],
-	[2, 'Larry', 'the Bird', '@twitter'],
-]
+  [0, 'Mark', 'Otto', '@mdo'],
+  [1, 'Jacob', 'Thornton', '@fat'],
+  [2, 'Larry', 'the Bird', '@twitter'],
+];
 
 const data = [
   {
