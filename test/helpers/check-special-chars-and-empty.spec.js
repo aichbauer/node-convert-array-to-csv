@@ -1,4 +1,4 @@
-import { checkSpecialCharsAndEmpty } from '../../src/helpers/check-special-chars-and-empty';
+const { checkSpecialCharsAndEmpty } = require('../../lib/helpers/check-special-chars-and-empty');
 
 test('checkIfValid | newline', () => {
   const result = checkSpecialCharsAndEmpty('\n');
@@ -36,8 +36,8 @@ test('checkIfValid | "', () => {
   expect(result).toBeTruthy();
 });
 
-test('checkIfValid | \'', () => {
-  const result = checkSpecialCharsAndEmpty('\'');
+test("checkIfValid | '", () => {
+  const result = checkSpecialCharsAndEmpty("'");
 
   expect(result).toBeTruthy();
 });

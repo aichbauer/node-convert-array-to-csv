@@ -1,24 +1,24 @@
-export const optionsHeaderSeparatorDefault = {
+exports.optionsHeaderSeparatorDefault = {
   header: ['Number', 'First', 'Last', 'Handle'],
   separator: ',',
 };
 
-export const optionsHeaderWithSpacesSeparatorDefault = {
+exports.optionsHeaderWithSpacesSeparatorDefault = {
   header: ['number number', 'first', 'last', 'handle'],
   separator: ',',
 };
 
-export const optionsHeaderSeperatorSemicolon = {
+exports.optionsHeaderSeperatorSemicolon = {
   header: ['Number', 'First', 'Last', 'Handle'],
   separator: ';',
 };
 
-export const optionsHeaderDefaultSeperatorTab = {
+exports.optionsHeaderDefaultSeperatorTab = {
   header: undefined,
   separator: '\t',
 };
 
-export const optionsDefault = {
+exports.optionsDefault = {
   header: undefined,
   separator: ',',
 };

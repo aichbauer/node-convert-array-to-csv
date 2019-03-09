@@ -1,16 +1,14 @@
-import converter, { convertArrayToCSV } from '../src';
+const { convertArrayToCSV } = require('../lib');
+const { convertArrayToCSV: converter } = require('../lib');
 
-import {
-  dataArrayWithoutHeader,
-  dataObject,
-} from './fixtures/data';
+const { dataArrayWithoutHeader, dataObject } = require('./fixtures/data');
 
-import {
+const {
   expectedResultArrayNoHeaderNoOptions,
   expectedResultObjectNoOptions,
-  expectedResultArrayHeaderWithSpaces,gco 
-} from './fixtures/expected-results';
-import { optionsHeaderWithSpacesSeparatorDefault } from './fixtures/options';
+  expectedResultArrayHeaderWithSpaces,
+} = require('./fixtures/expected-results');
+const { optionsHeaderWithSpacesSeparatorDefault } = require('./fixtures/options');
 
 test('convertArrayToCsv | array of arrays | with no header and no options', () => {
   const result = convertArrayToCSV(dataArrayWithoutHeader);
@@ -45,5 +43,7 @@ test('default export | array of objects | with no options', () => {
 test('convertArrayToCsv | not an array | with no options', () => {
   const result = () => convertArrayToCSV({});
 
-  expect(result).toThrow('data has to be typeof: object and instanceof Array: true but got typeof: object and instanceof Array: false');
+  expect(result).toThrow(
+    'data has to be typeof: object and instanceof Array: true but got typeof: object and instanceof Array: false',
+  );
 });

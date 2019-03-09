@@ -3,16 +3,17 @@
 [![npm](https://img.shields.io/npm/v/convert-array-to-csv.svg?style=flat-square)](https://www.npmjs.com/package/convert-array-to-csv)
 [![Travis branch](https://img.shields.io/travis/aichbauer/node-convert-array-to-csv/master.svg?style=flat-square)](https://travis-ci.org/aichbauer/node-convert-array-to-csv)
 [![Codecov branch](https://img.shields.io/codecov/c/github/aichbauer/node-convert-array-to-csv/master.svg?style=flat-square)](https://codecov.io/gh/aichbauer/node-convert-array-to-csv)
+[![npm](https://img.shields.io/badge/TypeScript-blue.svg?logo=typescript&style=flat-square&label=%3C/%3E)](https://www.npmjs.com/package/convert-array-to-csv)
 
 > Convert an array to a csv formatted string
 
 ## Table of Contents
 
-* [Why?](#why)
-* [Installation](#installation)
-* [Functions](#functions)
-* [Usage](#usage)
-* [License](#license)
+- [Why?](#why)
+- [Installation](#installation)
+- [Functions](#functions)
+- [Usage](#usage)
+- [License](#license)
 
 ## Why?
 
@@ -50,11 +51,11 @@ const csv = convertArrayToCSV(data, options);
 
 ##### Parameters
 
-* data: an array of arrays or an array of objects
-* options: a object
-  * holds two keys: header and separator
-  * **header**: and array with the name of the columns, default: `undefined`
-  * **separator**: the character which is the separator in your csv formatted string, default: `','`
+- data: an array of arrays or an array of objects
+- options: a object
+  - holds two keys: header and separator
+  - **header**: and array with the name of the columns, default: `undefined`
+  - **separator**: the character which is the separator in your csv formatted string, default: `','`
 
 ## Usage
 
@@ -101,7 +102,7 @@ const csvFromArrayOfObjects = convertArrayToCSV(dataObjects);
 */
 const csvFromArrayOfArrays = convertArrayToCSV(dataArrays, {
   header,
-  separator: ';'
+  separator: ';',
 });
 ```
 

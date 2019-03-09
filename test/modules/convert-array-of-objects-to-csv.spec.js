@@ -1,31 +1,24 @@
-import { convertArrayOfObjectsToCSV } from '../../src/modules/convert-array-of-objects-to-csv';
+const { convertArrayOfObjectsToCSV } = require('../../lib/modules/convert-array-of-objects-to-csv');
 
-import {
+const {
   dataObject,
   dataObjectWithNullAndUndefined,
   dataObjectWithDoubleQuotesInsideElement,
-} from '../fixtures/data';
-import {
+} = require('../fixtures/data');
+const {
   optionsHeaderSeperatorSemicolon,
   optionsHeaderSeparatorDefault,
   optionsHeaderDefaultSeperatorTab,
   optionsDefault,
-} from '../fixtures/options';
+} = require('../fixtures/options');
 
-import {
+const {
   expectedResultObjectNoOptions,
   expectedResultObjectHeaderSeparatorSemicolon,
   expectedResultObjectOnlyHeader,
   expectedResultObjecOnlySeparatorTab,
   expectedResultObjectNullAndUndefined,
-  expectedResultObjectWithDoubleQoutesInsideElement,
-} from '../fixtures/expected-results';
-
-test('convertArrayOfObjectsToCSV | array of objects | with default options', () => {
-  const result = convertArrayOfObjectsToCSV(dataObjectWithDoubleQuotesInsideElement, optionsDefault); // eslint-disable-line
-
-  expect(result).toBe(expectedResultObjectWithDoubleQoutesInsideElement);
-});
+} = require('../fixtures/expected-results');
 
 test('convertArrayOfObjectsToCSV | array of objects | with default options and double quotes in element', () => {
   const result = convertArrayOfObjectsToCSV(dataObject, optionsDefault);

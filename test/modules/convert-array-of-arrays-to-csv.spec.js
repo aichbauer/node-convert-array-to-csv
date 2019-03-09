@@ -1,20 +1,20 @@
-import { convertArrayOfArraysToCSV } from '../../src/modules/convert-array-of-arrays-to-csv';
+const { convertArrayOfArraysToCSV } = require('../../lib/modules/convert-array-of-arrays-to-csv');
 
-import {
+const {
   dataArrayWithHeader,
   dataArrayWithoutHeader,
   dataArrayWithHeaderAndNullAndUndefined,
   dataArrayWithHeaderAndZero,
   dataArrayWithDoubleQuotesInsideElement,
-} from '../fixtures/data';
-import {
+} = require('../fixtures/data');
+const {
   optionsHeaderSeperatorSemicolon,
   optionsHeaderSeparatorDefault,
   optionsHeaderDefaultSeperatorTab,
   optionsDefault,
-} from '../fixtures/options';
+} = require('../fixtures/options');
 
-import {
+const {
   expectedResultArrayWithHeaderNoOptions,
   expectedResultArrayNoHeaderNoOptions,
   expectedResultArrayOnlyHeader,
@@ -23,7 +23,7 @@ import {
   expectedResultArrayNullAndUndefined,
   expectedResultArrayZero,
   expectedResultArrayWithDoubleQoutesInsideElement,
-} from '../fixtures/expected-results';
+} = require('../fixtures/expected-results');
 
 test('convertArrayOfArraysToCSV | array of arrays | with default options', () => {
   const result = convertArrayOfArraysToCSV(dataArrayWithHeader, optionsDefault);

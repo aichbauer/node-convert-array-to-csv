@@ -1,6 +1,4 @@
-const headerArray = [
-  ['number', 'first', 'last', 'handle'],
-];
+const headerArray = [['number', 'first', 'last', 'handle']];
 
 const dataArray = [
   [1, 'Mark', 'Otto', '@mdo'],
@@ -89,37 +87,18 @@ const dataWithNullAndUndefined = [
   },
 ];
 
-export const dataArrayWithHeader = [
-  ...headerArray,
-  ...dataArray,
-];
+exports.dataArrayWithHeader = [...headerArray, ...dataArray];
 
-export const dataArrayWithDoubleQuotesInsideElement = [
-  ...dataArrayWithDoubleQuotes,
-];
+exports.dataArrayWithDoubleQuotesInsideElement = [...dataArrayWithDoubleQuotes];
 
-export const dataArrayWithoutHeader = [
-  ...dataArray,
-];
+exports.dataArrayWithoutHeader = [...dataArray];
 
-export const dataObject = [
-  ...data,
-];
+exports.dataObject = [...data];
 
-export const dataObjectWithDoubleQuotesInsideElement = [
-  ...dataObjectWithDoubleQuotes,
-];
+exports.dataObjectWithDoubleQuotesInsideElement = [...dataObjectWithDoubleQuotes];
 
-export const dataObjectWithNullAndUndefined = [
-  ...dataWithNullAndUndefined,
-];
+exports.dataObjectWithNullAndUndefined = [...dataWithNullAndUndefined];
 
-export const dataArrayWithHeaderAndNullAndUndefined = [
-  ...headerArray,
-  ...dataArrayWithNullAndUndefined,
-];
+exports.dataArrayWithHeaderAndNullAndUndefined = [...headerArray, ...dataArrayWithNullAndUndefined];
 
-export const dataArrayWithHeaderAndZero = [
-  ...headerArray,
-  ...dataArrayWithZero,
-];
+exports.dataArrayWithHeaderAndZero = [...headerArray, ...dataArrayWithZero];
