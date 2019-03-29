@@ -9,7 +9,7 @@ const dataArray = [
 ];
 
 const dataArrayWithDoubleQuotes = [
-  [1, 'Mark', 'Ot"to', '@mdo'],
+  [1, 'Mark', 'Ot"t"o', '@mdo'],
   [2, 'Jacob', 'Thornton', '@fat'],
   [3, 'Larry', 'the Bird', '@twitter'],
 ];
@@ -51,7 +51,7 @@ const dataObjectWithDoubleQuotes = [
   {
     number: 1,
     first: 'Mark',
-    last: 'Ot"to',
+    last: 'Ot"t"o',
     handle: '@mdo',
   },
   {
