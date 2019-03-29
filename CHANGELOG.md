@@ -1,3 +1,7 @@
+1.0.6 - March, 29 2019
+
+* 6653259 Fix: replace every double quote (#15) (Lukas Aichbauer)
+
 1.0.5 - February, 26 2019
 
 * 58ec063 Fix: double quotes inside elements (closes #9) (#12) (Lukas Aichbauer)

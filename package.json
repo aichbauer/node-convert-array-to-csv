@@ -1,6 +1,6 @@
 {
   "name": "convert-array-to-csv",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Convert an array to a csv formatted string",
   "main": "./lib/index.js",
   "repository": "https://www.github.com/aichbauer/node-convert-array-to-csv",
