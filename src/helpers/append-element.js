@@ -6,7 +6,7 @@ const separatorOrLineBreak = (length, elementIdx, separator) => (
 );
 
 const escapeDoubleQuotesInsideElement = (element) => {
-  const thisElement = element.replace('"', '""');
+  const thisElement = element.replace(/"/g, '""');
 
   return thisElement;
 };

@@ -1,5 +1,3 @@
-// import { checkSpecialCharsAndEmpty } from '../helpers/check-special-chars-and-empty';
-
 import { appendElement } from '../helpers/append-element';
 
 export const convertArrayOfArraysToCSV = (data, { header, separator }) => {
