@@ -1,3 +1,7 @@
+1.0.7 - April, 25 2019
+
+* 17a7f6e Fix: handle numbers correct (#17) (closes #16) (Lukas Aichbauer)
+
 1.0.6 - March, 29 2019
 
 * 6653259 Fix: replace every double quote (#15) (Lukas Aichbauer)
