@@ -6,6 +6,7 @@ import {
   dataArrayWithHeaderAndNullAndUndefined,
   dataArrayWithHeaderAndZero,
   dataArrayWithDoubleQuotesInsideElement,
+  dataArrayWithHeaderAndFloats,
 } from '../fixtures/data';
 import {
   optionsHeaderSeperatorSemicolon,
@@ -23,6 +24,7 @@ import {
   expectedResultArrayNullAndUndefined,
   expectedResultArrayZero,
   expectedResultArrayWithDoubleQoutesInsideElement,
+  expectedResultArrayWithFloats,
 } from '../fixtures/expected-results';
 
 test('convertArrayOfArraysToCSV | array of arrays | with default options', () => {
@@ -77,4 +79,10 @@ test('convertArrayOfArraysToCSV | array of arrays with value of zero | with defa
   const result = convertArrayOfArraysToCSV(dataArrayWithHeaderAndZero, optionsDefault);
 
   expect(result).toBe(expectedResultArrayZero);
+});
+
+test('convertArrayOfArraysToCSV | array of arrays with floats | with default options and header', () => {
+  const result = convertArrayOfArraysToCSV(dataArrayWithHeaderAndFloats, optionsDefault);
+
+  expect(result).toBe(expectedResultArrayWithFloats);
 });

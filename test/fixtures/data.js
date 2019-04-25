@@ -26,6 +26,12 @@ const dataArrayWithZero = [
   [2, 'Larry', 'the Bird', '@twitter'],
 ];
 
+const dataArrayWithFloat = [
+  [1.001, 'Mark', 'Otto', '@mdo'],
+  [2.002, 'Jacob', 'Thornton', '@fat'],
+  [3.33, 'Larry', 'the Bird', '@twitter'],
+];
+
 const data = [
   {
     number: 1,
@@ -89,6 +95,27 @@ const dataWithNullAndUndefined = [
   },
 ];
 
+const dataWithFloat = [
+  {
+    number: 1.001,
+    first: 'Mark',
+    last: 'Otto',
+    handle: '@mdo',
+  },
+  {
+    number: 2.002,
+    first: 'Jacob',
+    last: 'Thornton',
+    handle: '@fat',
+  },
+  {
+    number: 3.33,
+    first: 'Larry',
+    last: 'the Bird',
+    handle: '@twitter',
+  },
+];
+
 export const dataArrayWithHeader = [
   ...headerArray,
   ...dataArray,
@@ -114,9 +141,18 @@ export const dataObjectWithNullAndUndefined = [
   ...dataWithNullAndUndefined,
 ];
 
+export const dataObjectWithFloat = [
+  ...dataWithFloat,
+];
+
 export const dataArrayWithHeaderAndNullAndUndefined = [
   ...headerArray,
   ...dataArrayWithNullAndUndefined,
+];
+
+export const dataArrayWithHeaderAndFloats = [
+  ...headerArray,
+  ...dataArrayWithFloat,
 ];
 
 export const dataArrayWithHeaderAndZero = [
