@@ -4,6 +4,7 @@ import {
   dataObject,
   dataObjectWithNullAndUndefined,
   dataObjectWithDoubleQuotesInsideElement,
+  dataObjectWithFloat,
 } from '../fixtures/data';
 import {
   optionsHeaderSeperatorSemicolon,
@@ -19,6 +20,7 @@ import {
   expectedResultObjecOnlySeparatorTab,
   expectedResultObjectNullAndUndefined,
   expectedResultObjectWithDoubleQoutesInsideElement,
+  expectedResultObjectWithFloats,
 } from '../fixtures/expected-results';
 
 test('convertArrayOfObjectsToCSV | array of objects | with default options', () => {
@@ -58,4 +60,10 @@ test('convertArrayOfObjectsToCSV | array of objects with values of null and unde
   );
 
   expect(result).toBe(expectedResultObjectNullAndUndefined);
+});
+
+test('convertArrayOfObjectsToCSV | array of objects with float | options: default header', () => {
+  const result = convertArrayOfObjectsToCSV(dataObjectWithFloat, optionsDefault);
+
+  expect(result).toBe(expectedResultObjectWithFloats);
 });

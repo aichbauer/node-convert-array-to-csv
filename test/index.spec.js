@@ -8,7 +8,7 @@ import {
 import {
   expectedResultArrayNoHeaderNoOptions,
   expectedResultObjectNoOptions,
-  expectedResultArrayHeaderWithSpaces,gco 
+  expectedResultArrayHeaderWithSpaces,
 } from './fixtures/expected-results';
 import { optionsHeaderWithSpacesSeparatorDefault } from './fixtures/options';
 
