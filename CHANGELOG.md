@@ -1,3 +1,7 @@
+1.0.8 - May, 25 2019
+
+* bd592e5 Fix: zero (0) in header and body elements (#19) (Lukas Aichbauer)
+
 1.0.7 - April, 25 2019
 
 * 17a7f6e Fix: handle numbers correct (#17) (closes #16) (Lukas Aichbauer)
