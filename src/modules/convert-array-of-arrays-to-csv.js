@@ -6,7 +6,7 @@ export const convertArrayOfArraysToCSV = (data, { header, separator }) => {
 
   if (header) {
     header.forEach((headerEl, i) => {
-      const thisHeaderEl = headerEl || '';
+      const thisHeaderEl = headerEl || (headerEl === 0 ? 0 : '');
 
       csv += appendElement(thisHeaderEl, header.length, i, separator);
     });

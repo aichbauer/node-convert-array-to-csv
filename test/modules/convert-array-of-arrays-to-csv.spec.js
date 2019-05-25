@@ -13,6 +13,7 @@ import {
   optionsHeaderSeparatorDefault,
   optionsHeaderDefaultSeperatorTab,
   optionsDefault,
+  optionsHeaderZero,
 } from '../fixtures/options';
 
 import {
@@ -76,7 +77,7 @@ test('convertArrayOfArraysToCSV | array of arrays with values of null and undefi
 });
 
 test('convertArrayOfArraysToCSV | array of arrays with value of zero | with default options and header', () => {
-  const result = convertArrayOfArraysToCSV(dataArrayWithHeaderAndZero, optionsDefault);
+  const result = convertArrayOfArraysToCSV(dataArrayWithHeaderAndZero, optionsHeaderZero);
 
   expect(result).toBe(expectedResultArrayZero);
 });

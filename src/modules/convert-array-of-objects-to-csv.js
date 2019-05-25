@@ -6,7 +6,7 @@ export const convertArrayOfObjectsToCSV = (data, { header, separator }) => {
 
   if (header) {
     header.forEach((headerEl, i) => {
-      const thisHeaderEl = headerEl || '';
+      const thisHeaderEl = headerEl || (headerEl === 0 ? 0 : '');
 
       csv += appendElement(thisHeaderEl, header.length, i, separator);
     });
@@ -16,14 +16,14 @@ export const convertArrayOfObjectsToCSV = (data, { header, separator }) => {
     const thisRow = Object.keys(row);
     if (!header && idx === 0) {
       thisRow.forEach((key, i) => {
-        const value = key || '';
+        const value = key || (key === 0 ? 0 : '');
 
         csv += appendElement(value, thisRow.length, i, separator);
       });
     }
 
     thisRow.forEach((key, i) => {
-      const value = row[key] || '';
+      const value = row[key] || (row[key] === 0 ? 0 : '');
 
       csv += appendElement(value, thisRow.length, i, separator);
     });

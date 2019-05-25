@@ -5,12 +5,14 @@ import {
   dataObjectWithNullAndUndefined,
   dataObjectWithDoubleQuotesInsideElement,
   dataObjectWithFloat,
+  dataObjectWith0,
 } from '../fixtures/data';
 import {
   optionsHeaderSeperatorSemicolon,
   optionsHeaderSeparatorDefault,
   optionsHeaderDefaultSeperatorTab,
   optionsDefault,
+  optionsHeaderZero,
 } from '../fixtures/options';
 
 import {
@@ -21,6 +23,7 @@ import {
   expectedResultObjectNullAndUndefined,
   expectedResultObjectWithDoubleQoutesInsideElement,
   expectedResultObjectWithFloats,
+  expectedResultObjectZero,
 } from '../fixtures/expected-results';
 
 test('convertArrayOfObjectsToCSV | array of objects | with default options', () => {
@@ -66,4 +69,16 @@ test('convertArrayOfObjectsToCSV | array of objects with float | options: defaul
   const result = convertArrayOfObjectsToCSV(dataObjectWithFloat, optionsDefault);
 
   expect(result).toBe(expectedResultObjectWithFloats);
+});
+
+test('convertArrayOfObjectsToCSV | array of objects with value of zero | options: header with zero and "" + default separator', () => {
+  const result = convertArrayOfObjectsToCSV(dataObjectWith0, optionsHeaderZero);
+
+  expect(result).toBe(expectedResultObjectZero);
+});
+
+test('convertArrayOfObjectsToCSV | array of objects with value of zero | options: default header + default separator', () => {
+  const result = convertArrayOfObjectsToCSV(dataObjectWith0, optionsDefault);
+
+  expect(result).toBe(expectedResultObjectZero);
 });

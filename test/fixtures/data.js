@@ -116,6 +116,27 @@ const dataWithFloat = [
   },
 ];
 
+const dataWith0 = [
+  {
+    0: 0,
+    first: 'Mark',
+    last: 'Otto',
+    '': '@mdo',
+  },
+  {
+    0: 1,
+    first: 'Jacob',
+    last: 'Thornton',
+    '': '@fat',
+  },
+  {
+    0: 2,
+    first: 'Larry',
+    last: 'the Bird',
+    '': '@twitter',
+  },
+];
+
 export const dataArrayWithHeader = [
   ...headerArray,
   ...dataArray,
@@ -145,6 +166,10 @@ export const dataObjectWithFloat = [
   ...dataWithFloat,
 ];
 
+export const dataObjectWith0 = [
+  ...dataWith0,
+];
+
 export const dataArrayWithHeaderAndNullAndUndefined = [
   ...headerArray,
   ...dataArrayWithNullAndUndefined,
@@ -156,6 +181,5 @@ export const dataArrayWithHeaderAndFloats = [
 ];
 
 export const dataArrayWithHeaderAndZero = [
-  ...headerArray,
   ...dataArrayWithZero,
 ];

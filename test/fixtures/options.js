@@ -22,3 +22,8 @@ export const optionsDefault = {
   header: undefined,
   separator: ',',
 };
+
+export const optionsHeaderZero = {
+  header: [0, 'first', 'last', ''],
+  separator: ',',
+};
