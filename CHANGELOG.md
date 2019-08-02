@@ -1,3 +1,7 @@
+1.0.9 - August, 02 2019
+
+* 8ae2d19 Chore: switch yarn to npm (#21) (Lukas Aichbauer)
+
 1.0.8 - May, 25 2019
 
 * bd592e5 Fix: zero (0) in header and body elements (#19) (Lukas Aichbauer)
