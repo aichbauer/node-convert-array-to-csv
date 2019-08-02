@@ -5,7 +5,7 @@ node_js:
   - 6
   - 8
 install:
-  - yarn
+  - npm i
   - npm i -g codecov
 script:
   - npm test
