@@ -8,7 +8,7 @@ coverage
 *.log
 *.cache
 .eslintcache
-package-lock.json
+yarn.lock
 
 # macOS
 .DS_STORE
