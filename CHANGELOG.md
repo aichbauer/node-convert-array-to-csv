@@ -1,3 +1,8 @@
+1.0.10 - February, 14 2020
+
+* d95aa36 Chore: bump eslint-utils from 1.4.0 to 1.4.3 (#23) (dependabot[bot])
+* 53bb4e9 Chore: bump handlebars from 4.1.2 to 4.5.3 (#24) (dependabot[bot])
+
 1.0.9 - August, 02 2019
 
 * 8ae2d19 Chore: switch yarn to npm (#21) (Lukas Aichbauer)
