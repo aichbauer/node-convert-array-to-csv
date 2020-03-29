@@ -1,4 +1,5 @@
 import { appendElement } from '../helpers/append-element';
+import { valueOrEmpty } from '../helpers/value-or-empty';
 
 export const convertArrayOfArraysToCSV = (data, { header, separator }) => {
   const array = [...data];
@@ -6,7 +7,7 @@ export const convertArrayOfArraysToCSV = (data, { header, separator }) => {
 
   if (header) {
     header.forEach((headerEl, i) => {
-      const thisHeaderEl = headerEl || (headerEl === 0 ? 0 : '');
+      const thisHeaderEl = valueOrEmpty(headerEl);
 
       csv += appendElement(thisHeaderEl, header.length, i, separator);
     });
@@ -14,7 +15,7 @@ export const convertArrayOfArraysToCSV = (data, { header, separator }) => {
 
   array.forEach((row) => {
     row.forEach((value, i) => {
-      const thisValue = value || (value === 0 ? 0 : '');
+      const thisValue = valueOrEmpty(value);
 
       csv += appendElement(thisValue, row.length, i, separator);
     });
