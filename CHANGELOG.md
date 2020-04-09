@@ -1,3 +1,8 @@
+1.0.11 - April, 09 2020
+
+* 9dd684b Chore: update deps (#27) (Lukas Aichbauer)
+* 7ca8100 Refactor: Optimized helpers (#26) (Vano Devium)
+
 1.0.10 - February, 14 2020
 
 * d95aa36 Chore: bump eslint-utils from 1.4.0 to 1.4.3 (#23) (dependabot[bot])
