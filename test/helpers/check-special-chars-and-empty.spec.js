@@ -60,6 +60,18 @@ test('checkIfValid | no value', () => {
   expect(result).toBeTruthy();
 });
 
+test('checkIfValid | pipe as separator, pipe in text', () => {
+  const result = checkSpecialCharsAndEmpty('|', '|');
+
+  expect(result).toBeTruthy();
+});
+
+test('checkIfValid | pipe in text, default separator', () => {
+  const result = checkSpecialCharsAndEmpty('|');
+
+  expect(result).toBeFalsy();
+});
+
 test('checkIfValid | normal value', () => {
   const result = checkSpecialCharsAndEmpty('hello');
 

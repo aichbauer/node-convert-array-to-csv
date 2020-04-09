@@ -8,9 +8,9 @@ import {
   dataObjectWith0,
 } from '../fixtures/data';
 import {
-  optionsHeaderSeperatorSemicolon,
+  optionsHeaderSeparatorSemicolon,
   optionsHeaderSeparatorDefault,
-  optionsHeaderDefaultSeperatorTab,
+  optionsHeaderDefaultSeparatorTab,
   optionsDefault,
   optionsHeaderZero,
 } from '../fixtures/options';
@@ -19,9 +19,9 @@ import {
   expectedResultObjectNoOptions,
   expectedResultObjectHeaderSeparatorSemicolon,
   expectedResultObjectOnlyHeader,
-  expectedResultObjecOnlySeparatorTab,
+  expectedResultObjectOnlySeparatorTab,
   expectedResultObjectNullAndUndefined,
-  expectedResultObjectWithDoubleQoutesInsideElement,
+  expectedResultObjectWithDoubleQuotesInsideElement,
   expectedResultObjectWithFloats,
   expectedResultObjectZero,
 } from '../fixtures/expected-results';
@@ -29,7 +29,7 @@ import {
 test('convertArrayOfObjectsToCSV | array of objects | with default options', () => {
   const result = convertArrayOfObjectsToCSV(dataObjectWithDoubleQuotesInsideElement, optionsDefault); // eslint-disable-line
 
-  expect(result).toBe(expectedResultObjectWithDoubleQoutesInsideElement);
+  expect(result).toBe(expectedResultObjectWithDoubleQuotesInsideElement);
 });
 
 test('convertArrayOfObjectsToCSV | array of objects | with default options and double quotes in element', () => {
@@ -39,7 +39,7 @@ test('convertArrayOfObjectsToCSV | array of objects | with default options and d
 });
 
 test('convertArrayOfObjectsToCSV | array of objects | options: header + separator semicolon', () => {
-  const result = convertArrayOfObjectsToCSV(dataObject, optionsHeaderSeperatorSemicolon);
+  const result = convertArrayOfObjectsToCSV(dataObject, optionsHeaderSeparatorSemicolon);
 
   expect(result).toBe(expectedResultObjectHeaderSeparatorSemicolon);
 });
@@ -51,9 +51,9 @@ test('convertArrayOfObjectsToCSV | array of objects | options: header + default 
 });
 
 test('convertArrayOfObjectsToCSV | array of objects | options: default header + separator tab', () => {
-  const result = convertArrayOfObjectsToCSV(dataObject, optionsHeaderDefaultSeperatorTab);
+  const result = convertArrayOfObjectsToCSV(dataObject, optionsHeaderDefaultSeparatorTab);
 
-  expect(result).toBe(expectedResultObjecOnlySeparatorTab);
+  expect(result).toBe(expectedResultObjectOnlySeparatorTab);
 });
 
 test('convertArrayOfObjectsToCSV | array of objects with values of null and undefined | options: header + default separator', () => {

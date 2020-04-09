@@ -42,7 +42,13 @@ const dataArrayWithBooleans = [
   ['1 as string', '1'],
   ['0 as string', '0'],
   ['NaN', NaN],
-  ['empty string', ""],
+  ['empty string', ''],
+];
+
+const dataArrayWithPipe = [
+  [1, 'Mark | 1', 'Otto', '@mdo'],
+  [2, 'Jacob | 2', 'Thornton', '@fat'],
+  [3, 'Larry | 3', 'the Bird', '@twitter'],
 ];
 
 const data = [
@@ -199,4 +205,9 @@ export const dataArrayWithHeaderWithBooleans = [
 
 export const dataArrayWithHeaderAndZero = [
   ...dataArrayWithZero,
+];
+
+export const dataArrayWithHeaderAndPipe = [
+  ...headerArray,
+  ...dataArrayWithPipe,
 ];

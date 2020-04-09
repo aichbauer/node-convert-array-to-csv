@@ -7,7 +7,7 @@ const separatorOrLineBreak = (length, elementIdx, separator) => (
 const escapeDoubleQuotesInsideElement = (element) => element.replace(/"/g, '""');
 
 const appendElement = (element, lineLength, elementIdx, separator) => {
-  const includesSpecials = checkSpecialCharsAndEmpty(element);
+  const includesSpecials = checkSpecialCharsAndEmpty(element, separator);
 
   let thisElement = element;
 

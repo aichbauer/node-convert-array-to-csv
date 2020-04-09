@@ -8,11 +8,13 @@ import {
   dataArrayWithHeaderAndZero,
   dataArrayWithDoubleQuotesInsideElement,
   dataArrayWithHeaderAndFloats,
+  dataArrayWithHeaderAndPipe,
 } from '../fixtures/data';
 import {
-  optionsHeaderSeperatorSemicolon,
+  optionsHeaderSeparatorSemicolon,
   optionsHeaderSeparatorDefault,
-  optionsHeaderDefaultSeperatorTab,
+  optionsHeaderDefaultSeparatorTab,
+  optionsHeaderDefaultSeparatorPipe,
   optionsDefault,
   optionsHeaderBooleans,
   optionsHeaderZero,
@@ -27,8 +29,9 @@ import {
   expectedResultArrayNullAndUndefined,
   expectedResultArrayBooleans,
   expectedResultArrayZero,
-  expectedResultArrayWithDoubleQoutesInsideElement,
+  expectedResultArrayWithDoubleQuotesInsideElement,
   expectedResultArrayWithFloats,
+  expectedResultArrayOnlySeparatorPipe,
 } from '../fixtures/expected-results';
 
 test('convertArrayOfArraysToCSV | array of arrays | with default options', () => {
@@ -40,7 +43,7 @@ test('convertArrayOfArraysToCSV | array of arrays | with default options', () =>
 test('convertArrayOfArraysToCSV | array of arrays | with default options and double quotes in element', () => {
   const result = convertArrayOfArraysToCSV(dataArrayWithDoubleQuotesInsideElement, optionsDefault);
 
-  expect(result).toBe(expectedResultArrayWithDoubleQoutesInsideElement);
+  expect(result).toBe(expectedResultArrayWithDoubleQuotesInsideElement);
 });
 
 test('convertArrayOfArraysToCSV | array of arrays | with default options and no header', () => {
@@ -56,7 +59,7 @@ test('convertArrayOfArraysToCSV | array of arrays | with default options and no 
 });
 
 test('convertArrayOfArraysToCSV | array of arrays | options: header + separator semicolon', () => {
-  const result = convertArrayOfArraysToCSV(dataArrayWithoutHeader, optionsHeaderSeperatorSemicolon);
+  const result = convertArrayOfArraysToCSV(dataArrayWithoutHeader, optionsHeaderSeparatorSemicolon);
 
   expect(result).toBe(expectedResultArrayHeaderSeparatorSemicolon);
 });
@@ -68,9 +71,18 @@ test('convertArrayOfArraysToCSV | array of arrays | options: header + default se
 });
 
 test('convertArrayOfArraysToCSV | array of arrays | options: default header + separator tab', () => {
-  const result = convertArrayOfArraysToCSV(dataArrayWithHeader, optionsHeaderDefaultSeperatorTab);
+  const result = convertArrayOfArraysToCSV(dataArrayWithHeader, optionsHeaderDefaultSeparatorTab);
 
   expect(result).toBe(expectedResultArrayOnlySeparatorTab);
+});
+
+test('convertArrayOfArraysToCSV | array of arrays | options: default header + separator pipe', () => {
+  const result = convertArrayOfArraysToCSV(
+    dataArrayWithHeaderAndPipe,
+    optionsHeaderDefaultSeparatorPipe,
+  );
+
+  expect(result).toBe(expectedResultArrayOnlySeparatorPipe);
 });
 
 test('convertArrayOfArraysToCSV | array of arrays with values of null and undefined | options: header + default separator', () => {
