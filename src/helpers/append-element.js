@@ -14,11 +14,10 @@ const appendElement = (element, lineLength, elementIdx, separator) => {
   if (includesSpecials) {
     thisElement = escapeDoubleQuotesInsideElement(thisElement);
   }
+  const afterElement = separatorOrLineBreak(lineLength, elementIdx, separator);
 
   return (
-    includesSpecials
-      ? `"${thisElement}"${separatorOrLineBreak(lineLength, elementIdx, separator)}`
-      : `${thisElement}${separatorOrLineBreak(lineLength, elementIdx, separator)}`
+    includesSpecials ? `"${thisElement}"${afterElement}` : `${thisElement}${afterElement}`
   );
 };
 

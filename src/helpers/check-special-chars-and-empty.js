@@ -1,4 +1,4 @@
-const SYMBOLS = '\\n\\t,;.\'"`´ ';
+const SYMBOLS = '\\n"';
 
 export const checkSpecialCharsAndEmpty = (value, separator = null) => {
   const thisValue = value.toString().toLowerCase();
