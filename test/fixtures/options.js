@@ -23,6 +23,11 @@ export const optionsHeaderDefaultSeparatorPipe = {
   separator: '|',
 };
 
+export const optionsHeaderDefaultSeparatorNewline = {
+  header: undefined,
+  separator: '\n',
+};
+
 export const optionsDefault = {
   header: undefined,
   separator: ',',

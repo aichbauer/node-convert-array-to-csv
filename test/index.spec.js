@@ -10,7 +10,10 @@ import {
   expectedResultObjectNoOptions,
   expectedResultArrayHeaderWithSpaces,
 } from './fixtures/expected-results';
-import { optionsHeaderWithSpacesSeparatorDefault } from './fixtures/options';
+import {
+  optionsHeaderWithSpacesSeparatorDefault,
+  optionsHeaderDefaultSeparatorNewline,
+} from './fixtures/options';
 
 test('convertArrayToCsv | array of arrays | with no header and no options', () => {
   const result = convertArrayToCSV(dataArrayWithoutHeader);
@@ -46,4 +49,10 @@ test('convertArrayToCsv | not an array | with no options', () => {
   const result = () => convertArrayToCSV({});
 
   expect(result).toThrow('data has to be typeof: object and instanceof Array: true but got typeof: object and instanceof Array: false');
+});
+
+test('convertArrayToCsv | not an array | with no options', () => {
+  const result = () => convertArrayToCSV(dataObject, optionsHeaderDefaultSeparatorNewline);
+
+  expect(result).toThrow('The separator must be single-character and cannot be a newline or double quotes');
 });
