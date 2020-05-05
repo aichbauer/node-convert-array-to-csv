@@ -12,6 +12,8 @@ export const expectedResultArrayWithFloats = 'number,first,last,handle\n1.001,Ma
 
 export const expectedResultObjectWithFloats = 'number,first,last,handle\n1.001,Mark,Otto,@mdo\n2.002,Jacob,Thornton,@fat\n3.33,Larry,"the Bird",@twitter\n';
 
+export const expectedResultArrayBooleans = 'description,value\n"true as boolean",true\n"false as boolean",false\n"true as string",true\n"false as string",false\n"1 as number",1\n"0 as number",0\n"1 as string",1\n"0 as string",0\n';
+
 export const expectedResultArrayZero = '0,first,last,""\n0,Mark,Otto,@mdo\n1,Jacob,Thornton,@fat\n2,Larry,"the Bird",@twitter\n';
 
 export const expectedResultObjectZero = '0,first,last,""\n0,Mark,Otto,@mdo\n1,Jacob,Thornton,@fat\n2,Larry,"the Bird",@twitter\n';
