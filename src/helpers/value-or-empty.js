@@ -1,1 +1,7 @@
-export const valueOrEmpty = (data) => data || (data === 0 ? 0 : '');
+export const valueOrEmpty = (data) => {
+  if (data || data === false || data === 0) {
+    return data;
+  }
+
+  return '';
+};
