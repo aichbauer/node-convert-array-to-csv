@@ -42,7 +42,6 @@ const dataArrayWithBooleans = [
   ['1 as string', '1'],
   ['0 as string', '0'],
   ['NaN', NaN],
-  ['0n', 0n],
   ['empty string', ""],
 ];
 
