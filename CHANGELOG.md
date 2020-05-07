@@ -1,3 +1,7 @@
+1.0.12 - May, 07 2020
+
+* edf27e8 Fix: incorrect check for false values (#30) (John Pariseau)
+
 1.0.11 - April, 09 2020
 
 * 9dd684b Chore: update deps (#27) (Lukas Aichbauer)
