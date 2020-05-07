@@ -32,6 +32,19 @@ const dataArrayWithFloat = [
   [3.33, 'Larry', 'the Bird', '@twitter'],
 ];
 
+const dataArrayWithBooleans = [
+  ['true as boolean', true],
+  ['false as boolean', false],
+  ['true as string', 'true'],
+  ['false as string', 'false'],
+  ['1 as number', 1],
+  ['0 as number', 0],
+  ['1 as string', '1'],
+  ['0 as string', '0'],
+  ['NaN', NaN],
+  ['empty string', ""],
+];
+
 const data = [
   {
     number: 1,
@@ -178,6 +191,10 @@ export const dataArrayWithHeaderAndNullAndUndefined = [
 export const dataArrayWithHeaderAndFloats = [
   ...headerArray,
   ...dataArrayWithFloat,
+];
+
+export const dataArrayWithHeaderWithBooleans = [
+  ...dataArrayWithBooleans,
 ];
 
 export const dataArrayWithHeaderAndZero = [

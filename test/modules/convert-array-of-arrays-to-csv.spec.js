@@ -4,6 +4,7 @@ import {
   dataArrayWithHeader,
   dataArrayWithoutHeader,
   dataArrayWithHeaderAndNullAndUndefined,
+  dataArrayWithHeaderWithBooleans,
   dataArrayWithHeaderAndZero,
   dataArrayWithDoubleQuotesInsideElement,
   dataArrayWithHeaderAndFloats,
@@ -13,6 +14,7 @@ import {
   optionsHeaderSeparatorDefault,
   optionsHeaderDefaultSeperatorTab,
   optionsDefault,
+  optionsHeaderBooleans,
   optionsHeaderZero,
 } from '../fixtures/options';
 
@@ -23,6 +25,7 @@ import {
   expectedResultArrayHeaderSeparatorSemicolon,
   expectedResultArrayOnlySeparatorTab,
   expectedResultArrayNullAndUndefined,
+  expectedResultArrayBooleans,
   expectedResultArrayZero,
   expectedResultArrayWithDoubleQoutesInsideElement,
   expectedResultArrayWithFloats,
@@ -74,6 +77,12 @@ test('convertArrayOfArraysToCSV | array of arrays with values of null and undefi
   const result = convertArrayOfArraysToCSV(dataArrayWithHeaderAndNullAndUndefined, optionsDefault);
 
   expect(result).toBe(expectedResultArrayNullAndUndefined);
+});
+
+test('convertArrayOfArraysToCSV | array of arrays with boolean values | with default options and header', () => {
+  const result = convertArrayOfArraysToCSV(dataArrayWithHeaderWithBooleans, optionsHeaderBooleans);
+
+  expect(result).toBe(expectedResultArrayBooleans);
 });
 
 test('convertArrayOfArraysToCSV | array of arrays with value of zero | with default options and header', () => {

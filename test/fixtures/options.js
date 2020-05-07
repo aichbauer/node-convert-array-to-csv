@@ -23,6 +23,11 @@ export const optionsDefault = {
   separator: ',',
 };
 
+export const optionsHeaderBooleans = {
+  header: ['description', 'value'],
+  separator: ',',
+};
+
 export const optionsHeaderZero = {
   header: [0, 'first', 'last', ''],
   separator: ',',
