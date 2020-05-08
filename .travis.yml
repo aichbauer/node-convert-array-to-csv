@@ -4,6 +4,9 @@ dist: trusty
 node_js:
   - 6
   - 8
+  - 10
+  - 12
+  - 14
 install:
   - npm i
   - npm i -g codecov
