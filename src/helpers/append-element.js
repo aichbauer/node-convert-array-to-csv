@@ -7,18 +7,17 @@ const separatorOrLineBreak = (length, elementIdx, separator) => (
 const escapeDoubleQuotesInsideElement = (element) => element.replace(/"/g, '""');
 
 const appendElement = (element, lineLength, elementIdx, separator) => {
-  const includesSpecials = checkSpecialCharsAndEmpty(element);
+  const includesSpecials = checkSpecialCharsAndEmpty(element, separator);
 
   let thisElement = element;
 
   if (includesSpecials) {
     thisElement = escapeDoubleQuotesInsideElement(thisElement);
   }
+  const afterElement = separatorOrLineBreak(lineLength, elementIdx, separator);
 
   return (
-    includesSpecials
-      ? `"${thisElement}"${separatorOrLineBreak(lineLength, elementIdx, separator)}`
-      : `${thisElement}${separatorOrLineBreak(lineLength, elementIdx, separator)}`
+    includesSpecials ? `"${thisElement}"${afterElement}` : `${thisElement}${afterElement}`
   );
 };
 

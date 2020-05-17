@@ -6,52 +6,64 @@ test('checkIfValid | newline', () => {
   expect(result).toBeTruthy();
 });
 
-test('checkIfValid | tab', () => {
+test('checkIfValid | tab, tab separator', () => {
+  const result = checkSpecialCharsAndEmpty('\t', '\t');
+
+  expect(result).toBeTruthy();
+});
+
+test('checkIfValid | tab, default separator', () => {
   const result = checkSpecialCharsAndEmpty('\t');
 
+  expect(result).toBeFalsy();
+});
+
+test('checkIfValid | comma, comma separator', () => {
+  const result = checkSpecialCharsAndEmpty(',', ',');
+
   expect(result).toBeTruthy();
 });
 
-test('checkIfValid | ,', () => {
+test('checkIfValid | comma, default separator', () => {
   const result = checkSpecialCharsAndEmpty(',');
 
+  expect(result).toBeFalsy();
+});
+
+test('checkIfValid | semicolon, semicolon separator', () => {
+  const result = checkSpecialCharsAndEmpty(';', ';');
+
   expect(result).toBeTruthy();
 });
 
-test('checkIfValid | ;', () => {
+test('checkIfValid | semicolon, default separator', () => {
   const result = checkSpecialCharsAndEmpty(';');
 
+  expect(result).toBeFalsy();
+});
+
+test('checkIfValid | dot, dot separator', () => {
+  const result = checkSpecialCharsAndEmpty('.', '.');
+
   expect(result).toBeTruthy();
 });
 
-test('checkIfValid | .', () => {
+test('checkIfValid | dot, default separator', () => {
   const result = checkSpecialCharsAndEmpty('.');
 
+  expect(result).toBeFalsy();
+});
+
+test('checkIfValid | single quote, single quote separator', () => {
+  const result = checkSpecialCharsAndEmpty('\'', '\'');
+
   expect(result).toBeTruthy();
 });
 
-test('checkIfValid | "', () => {
-  const result = checkSpecialCharsAndEmpty('"');
-
-  expect(result).toBeTruthy();
-});
-
-test('checkIfValid | \'', () => {
+test('checkIfValid | single quote, default separator', () => {
   const result = checkSpecialCharsAndEmpty('\'');
 
-  expect(result).toBeTruthy();
-});
-
-test('checkIfValid | `', () => {
-  const result = checkSpecialCharsAndEmpty('`');
-
-  expect(result).toBeTruthy();
-});
-
-test('checkIfValid | ´', () => {
-  const result = checkSpecialCharsAndEmpty('´');
-
-  expect(result).toBeTruthy();
+  expect(result).toBeFalsy();
 });
 
 test('checkIfValid | no value', () => {
@@ -60,8 +72,32 @@ test('checkIfValid | no value', () => {
   expect(result).toBeTruthy();
 });
 
+test('checkIfValid | pipe, pipe separator', () => {
+  const result = checkSpecialCharsAndEmpty('|', '|');
+
+  expect(result).toBeTruthy();
+});
+
+test('checkIfValid | pipe, default separator', () => {
+  const result = checkSpecialCharsAndEmpty('|');
+
+  expect(result).toBeFalsy();
+});
+
 test('checkIfValid | normal value', () => {
   const result = checkSpecialCharsAndEmpty('hello');
 
   expect(result).toBeFalsy();
+});
+
+test('checkIfValid | double quote, double quote separator', () => {
+  const result = checkSpecialCharsAndEmpty('"', '"');
+
+  expect(result).toBeTruthy();
+});
+
+test('checkIfValid | double quote, default separator', () => {
+  const result = checkSpecialCharsAndEmpty('"');
+
+  expect(result).toBeTruthy();
 });

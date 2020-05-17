@@ -8,14 +8,24 @@ export const optionsHeaderWithSpacesSeparatorDefault = {
   separator: ',',
 };
 
-export const optionsHeaderSeperatorSemicolon = {
+export const optionsHeaderSeparatorSemicolon = {
   header: ['Number', 'First', 'Last', 'Handle'],
   separator: ';',
 };
 
-export const optionsHeaderDefaultSeperatorTab = {
+export const optionsHeaderDefaultSeparatorTab = {
   header: undefined,
   separator: '\t',
+};
+
+export const optionsHeaderDefaultSeparatorPipe = {
+  header: undefined,
+  separator: '|',
+};
+
+export const optionsHeaderDefaultSeparatorNewline = {
+  header: undefined,
+  separator: '\n',
 };
 
 export const optionsDefault = {
