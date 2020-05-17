@@ -1,3 +1,8 @@
+2.0.0 - May, 17 2020
+
+* f5ebcde Fix: consider separator in checks and use double quotes correctly (closes #22) (Vano Devium)
+* fb85b50 CI: changed to 12x, 14x versions of Node.js for test pipeline (closes #31) (Vano Devium)
+
 1.0.12 - May, 07 2020
 
 * edf27e8 Fix: incorrect check for false values (#30) (John Pariseau)
