@@ -2,6 +2,8 @@ export const expectedResultArrayNoHeaderNoOptions = '1,Mark,Otto,@mdo\n2,Jacob,T
 
 export const expectedResultObjectNoOptions = 'number,first,last,handle\n1,Mark,Otto,@mdo\n2,Jacob,Thornton,@fat\n3,Larry,the Bird,@twitter\n';
 
+export const expectedResultObjectNoHeader = '1,Mark,Otto,@mdo\n2,Jacob,Thornton,@fat\n3,Larry,the Bird,@twitter\n';
+
 export const expectedResultObjectOnlyHeader = 'Number,First,Last,Handle\n1,Mark,Otto,@mdo\n2,Jacob,Thornton,@fat\n3,Larry,the Bird,@twitter\n';
 
 export const expectedResultObjectNullAndUndefined = 'Number,First,Last,Handle\n1,Mark,"",@mdo\n2,Jacob,Thornton,""\n3,Larry,the Bird,@twitter\n';
