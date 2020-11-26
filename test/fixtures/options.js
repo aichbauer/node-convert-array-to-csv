@@ -3,6 +3,11 @@ export const optionsHeaderSeparatorDefault = {
   separator: ',',
 };
 
+export const optionsNullHeaderSeparatorDefault = {
+  header: null,
+  separator: ',',
+};
+
 export const optionsHeaderWithSpacesSeparatorDefault = {
   header: ['number number', 'first', 'last', 'handle'],
   separator: ',',

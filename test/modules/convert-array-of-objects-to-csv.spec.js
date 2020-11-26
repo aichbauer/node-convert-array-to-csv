@@ -10,6 +10,7 @@ import {
 import {
   optionsHeaderSeparatorSemicolon,
   optionsHeaderSeparatorDefault,
+  optionsNullHeaderSeparatorDefault,
   optionsHeaderDefaultSeparatorTab,
   optionsDefault,
   optionsHeaderZero,
@@ -19,6 +20,7 @@ import {
   expectedResultObjectNoOptions,
   expectedResultObjectHeaderSeparatorSemicolon,
   expectedResultObjectOnlyHeader,
+  expectedResultObjectNoHeader,
   expectedResultObjectOnlySeparatorTab,
   expectedResultObjectNullAndUndefined,
   expectedResultObjectWithDoubleQuotesInsideElement,
@@ -48,6 +50,12 @@ test('convertArrayOfObjectsToCSV | array of objects | options: header + default 
   const result = convertArrayOfObjectsToCSV(dataObject, optionsHeaderSeparatorDefault);
 
   expect(result).toBe(expectedResultObjectOnlyHeader);
+});
+
+test('convertArrayOfObjectsToCSV | array of objects | options: header = null + default separator', () => {
+  const result = convertArrayOfObjectsToCSV(dataObject, optionsNullHeaderSeparatorDefault);
+
+  expect(result).toBe(expectedResultObjectNoHeader);
 });
 
 test('convertArrayOfObjectsToCSV | array of objects | options: default header + separator tab', () => {

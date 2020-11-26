@@ -15,7 +15,7 @@ export const convertArrayOfObjectsToCSV = (data, { header, separator }) => {
 
   array.forEach((row, idx) => {
     const thisRow = Object.keys(row);
-    if (!header && idx === 0) {
+    if (header === undefined && idx === 0) {
       thisRow.forEach((key, i) => {
         const value = valueOrEmpty(key);
 
