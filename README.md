@@ -100,7 +100,7 @@ const csvFromArrayOfObjects = convertArrayToCSV(dataObjects);
   const csvFromArrayOfArrays  = 'number;first;last;handle\n1;Mark;Otto;@mdo\n2;Jacob;Thornton;@fat\n3;Larry;the Bird;@twitter\n';
 */
 const csvFromArrayOfArrays = convertArrayToCSV(dataArrays, {
-  header,
+  header: header,
   separator: ';'
 });
 ```
